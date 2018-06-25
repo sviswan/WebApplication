@@ -1,0 +1,42 @@
+﻿@model WebApplication.Models.Restaurant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Restaurant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RState)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RestaurantID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
