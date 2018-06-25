@@ -1,0 +1,12 @@
+﻿@model WebApplication.Models.Reviews
+
+<h4> @Model.Restaurant.RName</h4>
+<h4> @Model.ReviewerName</h4>
+<h4> @Model.ReviewerEmailID</h4>
+<h4> @Model.Rating</h4>
+@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+@Html.ActionLink("Details", "Details", new { id = Model.ReviewID }) |
+@Html.ActionLink("Delete", "Delete", new { id = Model.ReviewID })
+<hr />
+
+

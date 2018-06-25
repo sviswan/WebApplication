@@ -6814,3 +6814,16 @@ td.visible-print {
     display: none !important;
   }
 }
+
+.review
+{
+    padding: 2px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.review h4 {
+    color: maroon;
+    padding: 5px;
+    background: #cccc99
+   }

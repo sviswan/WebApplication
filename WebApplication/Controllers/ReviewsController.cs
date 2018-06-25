@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using WebApplication.Models;
 
 namespace WebApplication.Controllers
@@ -13,8 +14,13 @@ namespace WebApplication.Controllers
     public class ReviewsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-
+        public ActionResult BestReview()
+        {
+            var bestReview = from r in db.Reviews
+                             orderby r.Rating
+                             select r;
+            return PartialView("_Review", bestReview.First());
+        }
         //GET: Reviews/1
         public ActionResult Index(int? id)
         {
